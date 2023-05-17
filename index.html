@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Tríade - Calculadora</title>
+</head>
+
+<body>
+  <div class="intro">
+    <h1 class="logo-header">
+      <span class="logo"><b>さんごうかい</b></span>
+      <!-- <span class="logo">De</span> -->
+    </h1>
+  </div>
+
+  <header>
+    <h4>Tríade.</h4>
+    <div class="parcerias">
+      <button id="botao-parceria">parceiros</button>
+    </div>
+  </header>
+
+  <div id="fade" class="hide"></div>
+  <div id="modal" class="hide">
+    <div class="modal-header">
+      <h2>Relatório</h2>
+      <button id="close-modal">Fechar</button>
+    </div>
+    <div class="modal-body">
+      <span id="nome-relatorio">Nome:</span> <span id="nome-resultado"></span><br />
+      <span id="dinheiro-sujo-relatorio">Dinheiro sujo:</span>
+      <span id="dinheiro-sujo-resultado"></span><br />
+      <span id="limpo-cliente-relatorio">Dinheiro limpo para o cliente:</span>
+      <span id="limpo-cliente-resultado"></span><br />
+      <span id="limpo-lucro-relatorio">Dinheiro limpo para nós:</span>
+      <span id="limpo-lucro-resultado"></span><br />
+      <span id="porcentagem-relatorio">Porcentagem: <span id="porcentagem-resultado"></span></span>
+    </div>
+  </div>
+
+  <main>
+    <section class="container">
+      <div class="calculator">
+        <div class="text">
+          <h1>トライアド</h1>
+          <h5>LIMA É UMA BICHA</h5>
+        </div>
+
+        <div class="infos">
+          <label for="valor">Dinheiro sujo:</label>
+          <input type="text" id="valor" name="valor" value="100000" />
+          <label for="porcentagem">Porcentagem:</label>
+          <input type="number" id="porcentagem" name="porcentagem" value="30" />
+          <button type="button" onclick="calcular(); gerarRelatorio();" id="open-modal">Calcular </button>
+          <label for="solventes">Quantidade de recibos:</label>
+          <input type="text" id="solventes" name="solventes" disabled />
+          <label for="papel">Quantidade de acetona:</label>
+          <span id="qtdPapelMoeda"></span>
+          <span id="valorPapelMoeda"></span><br /><br />
+          <label for="cliente">Dinheiro limpo para o cliente:</label>
+          <input type="text" id="cliente" name="cliente" disabled />
+          <label for="lucro">Dinheiro limpo para nós:</label>
+          <input type="text" id="lucro" name="lucro" disabled />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="modal.js"></script>
+  <script src="app.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
